@@ -88,7 +88,6 @@
 											<tr>
 												<th>Stations</th>
 												<th>Contact</th>
-												<th>Person In Charge</th>
 												
 											</tr>
 										</thead>
@@ -109,9 +108,6 @@
 													<p><?php echo $row['phone_number']; ?></p>
 												</td>
 												<td>
-													<h5 class="time-title p-0"><?php echo $row['personincharge']; ?></h5>
-													<!-- <p>7.00 PM</p> -->
-												</td>
 												
 											</tr>
 											<?php } ?>

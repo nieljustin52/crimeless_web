@@ -47,10 +47,6 @@
                                                 <span class="text"><?php echo $_SESSION['SESS_USERNAME'];?></span>
                                             </li>
                                             <li>
-                                                <span class="title">State:</span>
-                                                <span class="text"><?php echo $_SESSION['SESS_STATE'];?></span>
-                                            </li>
-                                            <li>
                                                 <span class="title">Address:</span>
                                                 <span class="text"><?php echo $_SESSION['SESS_ADDRESS'];?></span>
                                             </li>

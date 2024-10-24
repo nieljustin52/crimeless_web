@@ -65,7 +65,7 @@
                     <div class="uni-medicare-header-main">
                         <!--LOGO-->
                         <div class="wrapper-logo">
-                            <a class="logo-default" href="#"><img src="images/logo.png" alt="" width="60px" class="img-responsive"></a>
+                            <a class="logo-default" href="#"><img src="images/logo.png" alt="" width="120px" class="img-responsive"></a> <!-- Adjust width as needed -->
                             <div class="clearfix"></div>
                         </div>
 
@@ -156,18 +156,6 @@
                                             <h4>Station </h4>
                                             <div class="uni-line"></div>
                                             <h4><a href="portal/agency">Login</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="uni-shortcode-icons-box-3-default">
-                                        <div class="item-icons">
-                                            <i class="fa fa-user" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="item-caption">
-                                            <h4>Users</h4>
-                                            <div class="uni-line"></div>
-                                            <h4><a href="portal/users">Login</a></h4>
                                         </div>
                                     </div>
                                 </div>

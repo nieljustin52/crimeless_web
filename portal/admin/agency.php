@@ -37,6 +37,12 @@
                             <a href="users.php"><i class="fa fa-user-plus"></i> <span>Manage Admin</span></a>
                         </li>
                        <li>
+                            <a href="manage_game.php"><i class="fa fa-gamepad"></i> <span>Manage Game</span></a>
+                        </li>
+                        <li>
+                            <a href="news_feed.php"><i class="fa fa-newspaper-o"></i> <span>News Feed</span></a>
+                        </li>
+                        <li>
                             <a href="information.php"><i class="fa fa-info-circle"></i> <span>Project information</span></a>
                         </li>
                         <li>

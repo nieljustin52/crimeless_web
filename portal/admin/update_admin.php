@@ -6,7 +6,6 @@ include('includes/connect.php');
 $id = $_GET['id'];
 $a = $_POST['name'];
 $b = $_POST['email'];
-$c = $_POST['state'];
 $d = $_POST['phone'];
 $e = $_POST['address'];
 
@@ -30,9 +29,9 @@ if ($stmt->rowCount() > 0) {
         // Move the uploaded file to the uploads directory
         if (move_uploaded_file($_FILES['photo']['tmp_name'], $path)) {
             // Update the admin record with the new profile picture
-            $sql = "UPDATE admin SET name = :a, email = :b, state = :c, phone = :d, address = :e, photo = :f WHERE id = :id";
+            $sql = "UPDATE admin SET name = :a, email = :b, phone = :d, address = :e, photo = :f WHERE id = :id";
             $q = $db->prepare($sql);
-            $q->execute(array(':a' => $a, ':b' => $b, ':c' => $c, ':d' => $d, ':e' => $e, ':f' => $file_name_new, ':id' => $id));
+            $q->execute(array(':a' => $a, ':b' => $b, ':d' => $d, ':e' => $e, ':f' => $file_name_new, ':id' => $id));
             
             if ($q) {
                 // Update session variables
@@ -55,7 +54,7 @@ if ($stmt->rowCount() > 0) {
         // Update the admin record without changing the profile picture
         $sql = "UPDATE admin SET name = :a, email = :b, state = :c, phone = :d, address = :e WHERE id = :id";
         $q = $db->prepare($sql);
-        $q->execute(array(':a' => $a, ':b' => $b, ':c' => $c, ':d' => $d, ':e' => $e, ':id' => $id));
+        $q->execute(array(':a' => $a, ':b' => $b, ':d' => $d, ':e' => $e, ':id' => $id));
         
         if ($q) {
             // Update session variables

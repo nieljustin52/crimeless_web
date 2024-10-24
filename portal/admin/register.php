@@ -37,10 +37,6 @@
                             <label>Email Address</label>
                             <input type="email" name="email" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label>State</label>
-                            <input type="text" name="state" class="form-control">
-                        </div>
                          <div class="form-group">
                             <label>Username</label>
                             <input type="text" name="username" class="form-control">

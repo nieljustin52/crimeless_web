@@ -24,6 +24,12 @@
                         <li><a href="report-emergency.php"><i class="fa fa-heartbeat"></i> <span>Reports Emergency</span></a></li>
                         <li><a href="report_history.php"><i class="fa fa-file-text-o"></i> <span>Reports History</span></a></li>
                         <li><a href="users.php"><i class="fa fa-user-plus"></i> <span>Manage Admin</span></a></li>
+                        <li>
+                            <a href="manage_game.php"><i class="fa fa-gamepad"></i> <span>Manage Game</span></a>
+                        </li>
+                        <li>
+                            <a href="news_feed.php"><i class="fa fa-newspaper-o"></i> <span>News Feed</span></a>
+                        </li>
                         <li><a href="information.php"><i class="fa fa-info-circle"></i> <span>Project information</span></a></li>
                         <li><a href="logout.php"><i class="fa fa-power-off"></i> <span>Logout</span></a></li>
                     </ul>
@@ -82,13 +88,6 @@
                                 </div>
                                 
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>State</label>
-                                            <input class="form-control" type="text" name="state" value="<?php echo $row['state']; ?>" required>
-                                        </div>
-                                    </div>
-                                    
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Address</label>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 29, 2023 at 02:11 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Oct 24, 2024 at 01:01 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -45,7 +45,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `email`, `phone`, `state`, `username`, `password`, `address`, `agency_id`, `photo`) VALUES
-(10, 'Jonathan Odoh', 'jonathan@gmail.com', '09063633140', 'Abuja', 'admin', 'admin', 'FCT', '6757', 'admin08d9b861efdf38556a13bceab9930529.jpg');
+(22, 'Niel Paulin', 'niel@gmail.com', '09512398789', 'Cebu City', 'niel', '123', '', '5506', ''),
+(23, 'Nichole Ann Montante Dinauanao', 'nichole@gmail.com', '09123234123', 'Cebu City', 'nini', '123', '', '9162', '');
 
 -- --------------------------------------------------------
 
@@ -72,11 +73,17 @@ CREATE TABLE `agency` (
 --
 
 INSERT INTO `agency` (`id`, `agency_id`, `agency_name`, `phone_number`, `email`, `personincharge`, `username`, `password`, `state`, `address`, `photo`) VALUES
-(3, '1337', 'Police', '090637889', 'police@gmail.com', 'Jonathan', 'police', '12345', 'abuja', 'FCT', 'agency149e3e44f00d4dad791c2102a3cd1c7e.jpg'),
-(4, '9496', 'EFCC', '09063633140', 'efcc@gmail.com', 'Mark', 'efcc', '12345', 'Abuja', 'Matiama', 'agency9d048ddf481d5009d104bfd3a4afb72b.jpg'),
-(5, '5253', 'Federal Fire Service', '0907657688', 'ffs@gmail.com', 'Victor', 'ffs', '12345', 'Kogi', 'Felele', 'agency68fbecbc443b96a0fbc0c18e9b201e88.jpg'),
-(6, '9434', 'Civil Defence', '090766777', 'civil@gmail.com', 'Esther', 'civil', '12345', 'Nasarawa ', 'Lafia', 'agency2bb60c40c688f55f49b3940064d1c95e.png'),
-(7, '1342', 'Federal Medical Center', '090787887', 'fmc@gmail.com', 'David', 'fmc', '12345', 'Abuja', 'Central Area', 'agency482b2fd2b3bed88c560f789553794131.jpg');
+(10, '9284', 'Parian Police Station', ' (032) 255 8404', 'parianstation@gmail.com', '', 'parian', '123', '', '7WX3+P7G, Sikatuna St, Cebu City, 6000 Cebu', 'agencyf03e0fd420fb98f0308f29a24cd60170.jfif'),
+(11, '1799', 'Cebu City Police Station', '0917 305 7336', 'cebucitystation@gmail.com', '', 'cebucity', '123', '', '8V2W+V6H, Cebu City, 6000 Cebu', 'agency1ff7700b818e7808bede2220e9977bb8.jfif'),
+(13, '6507', 'Waterfront Police Station', '0998 967 3781', 'waterfrontstation@gmail.com', '', 'waterfront', '123', '', '7WV4+7RC, Legaspi Ext., Cebu City, 6000 Cebu', 'agencye8c2526917454412168db6b800934ae1.jfif'),
+(14, '9101', 'Mabolo Police Station', '0932 592 4464', 'mabolostation@gmail.com', '', 'mabolo', '123', '', '8W68+X8M, Cebu City, 6000 Cebu', 'agencya6ff825971eb855d508afa416dd819ae.jfif'),
+(15, '9557', 'Carbon Police Station', ' 0923 644 6496', 'carbonstation@gmail.com', '', 'carbon', '123', '', '7VRX+H3J, M. C. Briones St, Cebu City, 6000 Cebu', 'agency47e101f40b101debddbe859d30e50775.jfif'),
+(16, '3178', 'Pasil Police Station', '0917 305 7348', 'pasilstation@gmail.com', '', 'pasil', '123', '', '6000, Spolarium St, Cebu City, 6000 Cebu', 'agency8f30353e21be58ff45b921c161eef736.jfif'),
+(17, '5309', 'Pardo Police Station', '0932 484 5255', 'pardostation@gmail.com', '', 'pardo', '123', '', 'J 6000, I Tabura St, Cebu City, 6000 Cebu', 'agency8418ee5cd07a72216d1c1a4f27eff937.jfif'),
+(18, '1850', 'Talamban Police Station', '0922 219 4959', 'talambanstation@gmail.com', '', 'talamban', '123', '', '9W98+WPC, Talamban Rd, Cebu City, 6000 Cebu', 'agencye0ab4f78ae3e421a3b6c4c6e264a8f08.jfif'),
+(19, '7717', 'Guadalupe Police Station', '0949 379 4350', 'guadalupestation@gmail.com', '', 'guadalupe', '123', '', '1112 V Rama Ave, Cebu City, 6000 Cebu', 'agencyc42ab881fadd3ce3380390f5e5b61bc4.jfif'),
+(20, '5005', 'Punta Princesa Police Station', '0905 331 9514', 'puntaprincesastation@gmail.com', '', 'puntaprincesa', '123', '', '7VWC+4P5, GF, Punta Princesa Multi-Purpose Bldg.,, Tres de Abril St, Lungsod ng Cebu, 6000 Lalawigan ng Cebu', 'agencye6168e818b40d264abf5d32d16e733da.jfif'),
+(21, '4521', 'Mambaling Police Station', '0917 327 5188', 'mambalingstation@gmail.com', '', 'mambaling', '123', '', '7VRG+WJG, Maria Gochan St, Cebu City, 6000 Cebu', 'agency89d86e13fc6e47abe616758ccfb971b4.jfif');
 
 -- --------------------------------------------------------
 
@@ -112,7 +119,10 @@ INSERT INTO `emergency` (`id`, `emergency_id`, `agency_id`, `agency_name`, `case
 (78, 6001, '1337', '', 'Normal', 'Accident', '', 'Abuja', '09063633140', 'nn', 'Jonathan Odoh', 'Pending', 'jonathan@gmail.com', '17-05-2023', '3253', 'nn', 'emergency0283bcfb67710bf2957fe23b3a061590.jpeg'),
 (79, 3642, '9496', '', 'Normal', 'Accident', '', 'Abuja', '090637889', 'tgfhg', 'Police', 'Resolved', 'police@gmail.com', '18-05-2023', '1337', 'hjhgf', 'emergency38642db2c33f41d4f4a5157c0fcbb2b0.jpeg'),
 (80, 5637, '9496', '', 'Normal', 'Accident', '', 'Kogi', '09063633140', 'gtbf', 'EFCC', 'Resolved', 'efcc@gmail.com', '18-05-2023', '9496', 'ggb', 'emergencye153c9b4edaf52253f997e9a7c9923ad.jpeg'),
-(81, 8287, '1337', '', 'Normal', 'Accident', '', 'Abuja', '09063633140', 'hh', 'Jonathan Odoh', 'Resolved', 'jonathan@gmail.com', '29-05-2023', '3253', 'sgzf', 'emergency34e2e5968dfd4122bcb598c4b63bb9eb.jpeg');
+(81, 8287, '1337', '', 'Normal', 'Accident', '', 'Abuja', '09063633140', 'hh', 'Jonathan Odoh', 'Resolved', 'jonathan@gmail.com', '29-05-2023', '3253', 'sgzf', 'emergency34e2e5968dfd4122bcb598c4b63bb9eb.jpeg'),
+(82, 6329, '1337', '', 'Critical', 'Accident', '', 'cebu city', '09234123141', '', 'Kerr Cananua', 'Resolved', 'kerr@gmail.com', '28-09-2024', '9705', '', ''),
+(83, 4183, '9434', '', 'Danger', 'Select', '', 'cebu city', '09512398789', '', 'Niel Paulin', 'Resolved', 'niel@gmail.com', '28-09-2024', '5506', '', ''),
+(84, 3139, '1337', '', 'Critical', 'Accident', '', 'cebu city', '09512398789', '', 'Niel Paulin', 'Resolved', 'niel@gmail.com', '30-09-2024', '5506', '', '');
 
 -- --------------------------------------------------------
 
@@ -140,6 +150,69 @@ INSERT INTO `emergency_type` (`id`, `name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `game_challenges`
+--
+
+CREATE TABLE `game_challenges` (
+  `id` int(11) NOT NULL,
+  `challenge_text` varchar(255) NOT NULL,
+  `reward` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `game_challenges`
+--
+
+INSERT INTO `game_challenges` (`id`, `challenge_text`, `reward`, `created_at`) VALUES
+(1, 'what if', '2 points', '2024-10-22 16:04:40'),
+(2, 'what if', '2 points', '2024-10-22 16:09:06'),
+(3, 'what if', '2 points', '2024-10-22 16:09:20'),
+(4, 'what if', '2 points', '2024-10-22 16:10:07'),
+(5, 'what if', '2 points', '2024-10-22 16:20:37');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `leaderboard`
+--
+
+CREATE TABLE `leaderboard` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `rank` int(11) NOT NULL,
+  `score` int(11) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news_feed`
+--
+
+CREATE TABLE `news_feed` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reward_announcements`
+--
+
+CREATE TABLE `reward_announcements` (
+  `id` int(11) NOT NULL,
+  `announcement_text` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -162,7 +235,22 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `username`, `password`, `joined`, `state`, `phone`, `user_id`, `address`, `photo`) VALUES
-(23, 'Jonathan Odoh', 'jonathan@gmail.com', 'jona', 'jona', '', 'Abuja', '09063633140', '3253', '', '');
+(23, 'Jonathan Odoh', 'jonathan@gmail.com', 'jona', 'jona', '', 'Abuja', '09063633140', '3253', '', ''),
+(24, 'Kerr Cananua', 'kerr@gmail.com', 'kerr', '123', '', 'Cebu City', '09234123141', '9705', '', ''),
+(25, 'Nichole Ann Montante Dinauanao', 'nichole@gmail.com', 'nini', '123', '', 'Cebu City', '09123234123', '2395', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_scores`
+--
+
+CREATE TABLE `user_scores` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `score` int(11) DEFAULT 0,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -193,10 +281,42 @@ ALTER TABLE `emergency_type`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `game_challenges`
+--
+ALTER TABLE `game_challenges`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `leaderboard`
+--
+ALTER TABLE `leaderboard`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `news_feed`
+--
+ALTER TABLE `news_feed`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `reward_announcements`
+--
+ALTER TABLE `reward_announcements`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user_scores`
+--
+ALTER TABLE `user_scores`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -206,31 +326,77 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `agency`
 --
 ALTER TABLE `agency`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `emergency`
 --
 ALTER TABLE `emergency`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
 -- AUTO_INCREMENT for table `emergency_type`
 --
 ALTER TABLE `emergency_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `game_challenges`
+--
+ALTER TABLE `game_challenges`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `leaderboard`
+--
+ALTER TABLE `leaderboard`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `news_feed`
+--
+ALTER TABLE `news_feed`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `reward_announcements`
+--
+ALTER TABLE `reward_announcements`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `user_scores`
+--
+ALTER TABLE `user_scores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `leaderboard`
+--
+ALTER TABLE `leaderboard`
+  ADD CONSTRAINT `leaderboard_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `user_scores`
+--
+ALTER TABLE `user_scores`
+  ADD CONSTRAINT `user_scores_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
